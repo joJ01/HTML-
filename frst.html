@@ -4,24 +4,27 @@
    
 <script>
      function check_eligibilty()
-     {
-            var personAge;
-            personAge=Number(document.getElementById("age").value);
-            if (personAge >= 18)
-            {    
-                alert("juman can get driver license")
-            }
-            else
-            {                
-                alert("juman can't get driver license")
-            }
+	 {
+	 var name = document.getElementById("name").value;
+			var personAge;
+			personAge=Number(document.getElementById("age").value);
+			if (personAge >= 18)
+			{	
+				alert("hi " +name + " can get driver license")
+			}
+			else
+			{				
+				alert("hi " +name + " can't get driver license")
+			}
 
-      }
+	  }
 </script>
    </head>
      <body>
-         Enter your name:<input id="name"><br />
-         Enter your age:<input id="age"><br />
+         <label for="name">Name:</label>
+	<input type="text" id="name" name="name"><br><br>
+	<label for="age">Age:</label>
+	<input type="number" id="age" name="age"><br><br>
          
          <button onclick="check_eligibilty()">Submit</button>
 </body>
